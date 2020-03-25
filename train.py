@@ -7,7 +7,7 @@ df = pd.read_csv('data/creditcard-sample10k.csv')
 features_train = df.sample(frac=0.75, random_state=100)
 features_test = df[~df.index.isin(features_train.index)]
 
-drop_time_class = ['Time','Class','V1','V2','V5','V6','V7','V8','V9','V13','V15','V16','V18','V19','V20','V21','V22','V23','V24','V25','V26','V27','V28']
+drop_time_class = ['Time','Class','V1','V2','V4', 'V5','V6','V7','V8','V9','V10','V11','V12','V13','V14','V15','V16','V17','V18','V19','V20','V21','V22','V23','V24','V25','V26','V27','V28', 'Amount']
 drop_class=['Class']
 
 features_train = features_train.loc[:, ~features_train.columns.str.contains('^Unnamed')]
